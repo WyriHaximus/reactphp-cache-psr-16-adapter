@@ -1,6 +1,6 @@
 {
   "name": "wyrihaximus/react-cache-psr-16-adapter",
-  "description": "\ud83e\udeb5 Async PSR-3 loggly logger",
+  "description": "\ud83d\udd0c PSR-16 adapter",
   "license": "MIT",
   "authors": [
     {
