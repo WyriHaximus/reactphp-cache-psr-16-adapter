@@ -23,7 +23,7 @@ final class PSR16Adapter implements SimpleCacheInterface
      * @inheritDoc
      * @phpstan-ignore-next-line
      */
-    public function get(string $key, mixed $default = null): mixed
+    public function get(string $key, mixed $default = null)
     {
         /**
          * @psalm-suppress TooManyTemplateParams
@@ -35,7 +35,7 @@ final class PSR16Adapter implements SimpleCacheInterface
      * @inheritDoc
      * @phpstan-ignore-next-line
      */
-    public function set(string $key, mixed $value, DateInterval|int|null $ttl = null): bool
+    public function set(string $key, mixed $value, DateInterval|int|null $ttl = null)
     {
         /**
          * @var bool
@@ -44,7 +44,10 @@ final class PSR16Adapter implements SimpleCacheInterface
         return await($this->cache->set($key, $value, $this->convertToSeconds($ttl)));
     }
 
-    public function delete(string $key): bool
+    /**
+     * @inheritDoc
+     */
+    public function delete(string $key)
     {
         /**
          * @var bool
@@ -53,7 +56,10 @@ final class PSR16Adapter implements SimpleCacheInterface
         return await($this->cache->delete($key));
     }
 
-    public function clear(): bool
+    /**
+     * @inheritDoc
+     */
+    public function clear()
     {
         /**
          * @var bool
@@ -81,7 +87,7 @@ final class PSR16Adapter implements SimpleCacheInterface
      * @inheritDoc
      * @phpstan-ignore-next-line
      */
-    public function setMultiple(iterable $values, DateInterval|int|null $ttl = null): bool
+    public function setMultiple(iterable $values, DateInterval|int|null $ttl = null)
     {
         /**
          * @var bool
@@ -94,7 +100,7 @@ final class PSR16Adapter implements SimpleCacheInterface
     /**
      * @inheritDoc
      */
-    public function deleteMultiple(iterable $keys): bool
+    public function deleteMultiple(iterable $keys)
     {
         /**
          * @var bool
@@ -105,7 +111,10 @@ final class PSR16Adapter implements SimpleCacheInterface
         return await($this->cache->deleteMultiple(iterable_to_array($keys)));
     }
 
-    public function has(string $key): bool
+    /**
+     * @inheritDoc
+     */
+    public function has(string $key)
     {
         /**
          * @var bool

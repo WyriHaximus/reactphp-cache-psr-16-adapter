@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ce2eaae420670d0a1cc1aaf5e64ba47",
+    "content-hash": "305779bf6f0283391c79e9973c1664a8",
     "packages": [
         {
             "name": "bentools/iterable-functions",
@@ -55,16 +55,16 @@
         },
         {
             "name": "psr/simple-cache",
-            "version": "3.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
+                "reference": "8707bf3cea6f710bf6ef05491234e3ab06f6432a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
-                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/8707bf3cea6f710bf6ef05491234e3ab06f6432a",
+                "reference": "8707bf3cea6f710bf6ef05491234e3ab06f6432a",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -100,9 +100,9 @@
                 "simple-cache"
             ],
             "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
+                "source": "https://github.com/php-fig/simple-cache/tree/2.0.0"
             },
-            "time": "2021-10-29T13:26:27+00:00"
+            "time": "2021-10-29T13:22:09+00:00"
         },
         {
             "name": "react/async",
@@ -4771,16 +4771,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.6.4",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "135607f9ccc297d6923d49c2bcf309f509413215"
+                "reference": "367a8d9d5f7da2a0136422d27ce8840583926955"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/135607f9ccc297d6923d49c2bcf309f509413215",
-                "reference": "135607f9ccc297d6923d49c2bcf309f509413215",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/367a8d9d5f7da2a0136422d27ce8840583926955",
+                "reference": "367a8d9d5f7da2a0136422d27ce8840583926955",
                 "shasum": ""
             },
             "require": {
@@ -4810,9 +4810,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.6.4"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.7.0"
             },
-            "time": "2022-06-26T13:09:08+00:00"
+            "time": "2022-08-09T12:23:23+00:00"
         },
         {
             "name": "phpstan/phpstan",
