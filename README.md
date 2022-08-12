@@ -15,13 +15,17 @@ composer require wyrihaximus/react-cache-psr-16-adapter
 
 ## Usage ##
 
-Take any [`react/cache`](https://reactphp.org/cache/) implementation, like [`wyrihaximus/react-cache-redis `](https://github.com/WyriHaximus/reactphp-cache-redis) we'll be using in this example.
+Take any [`react/cache`](https://reactphp.org/cache/) implementation, like
+[`wyrihaximus/react-cache-redis `](https://github.com/WyriHaximus/reactphp-cache-redis) we'll be using in this example.
+Decorate it with a `PSR16Adapter` instance, and you can use them as a PSR-16 cache within fibers. Directly, or with
+other packages. Internally `PSR16Adapter` uses [`await`](https://reactphp.org/async/#await) on every method call to the
+`react/cache` implementation to make it compatible.
 
 ```php
 $cache = new PSR16Adapter(new Redis($reditClient, 'react:cache:your:key:prefix:'));
 
 React\Async\async(function () {
-    $cache->set('key', 'value');
+    $cache->set('key', 'value'); // All methods use `await` internally to make any ReactPHP cache PSR-16 compatible
     echo $cache->get('key'); // echos: value
 })();
 ```
