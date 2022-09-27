@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03a77edb03a6b012a32f11346fbc764c",
+    "content-hash": "a809fce97689ebbac85ed128160509dd",
     "packages": [
         {
             "name": "bentools/iterable-functions",
@@ -4847,16 +4847,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.8.5",
+            "version": "1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "f6598a5ff12ca4499a836815e08b4d77a2ddeb20"
+                "reference": "c386ab2741e64cc9e21729f891b28b2b10fe6618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f6598a5ff12ca4499a836815e08b4d77a2ddeb20",
-                "reference": "f6598a5ff12ca4499a836815e08b4d77a2ddeb20",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c386ab2741e64cc9e21729f891b28b2b10fe6618",
+                "reference": "c386ab2741e64cc9e21729f891b28b2b10fe6618",
                 "shasum": ""
             },
             "require": {
@@ -4886,7 +4886,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.8.5"
+                "source": "https://github.com/phpstan/phpstan/tree/1.8.6"
             },
             "funding": [
                 {
@@ -4902,7 +4902,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-07T16:05:32+00:00"
+            "time": "2022-09-23T09:54:39+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -5059,21 +5059,21 @@
         },
         {
             "name": "phpstan/phpstan-strict-rules",
-            "version": "1.4.3",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "431b3d6e8040075de196680cd5bc95735987b4ae"
+                "reference": "23e5f377ee6395a1a04842d3d6ed4bd25e7b44a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/431b3d6e8040075de196680cd5bc95735987b4ae",
-                "reference": "431b3d6e8040075de196680cd5bc95735987b4ae",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/23e5f377ee6395a1a04842d3d6ed4bd25e7b44a6",
+                "reference": "23e5f377ee6395a1a04842d3d6ed4bd25e7b44a6",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.8.3"
+                "phpstan/phpstan": "^1.8.6"
             },
             "require-dev": {
                 "nikic/php-parser": "^4.13.0",
@@ -5101,9 +5101,9 @@
             "description": "Extra strict and opinionated rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.4.3"
+                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.4.4"
             },
-            "time": "2022-08-26T15:05:46+00:00"
+            "time": "2022-09-21T11:38:17+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5425,16 +5425,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.24",
+            "version": "9.5.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d0aa6097bef9fd42458a9b3c49da32c6ce6129c5"
+                "reference": "3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d0aa6097bef9fd42458a9b3c49da32c6ce6129c5",
-                "reference": "d0aa6097bef9fd42458a9b3c49da32c6ce6129c5",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d",
+                "reference": "3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d",
                 "shasum": ""
             },
             "require": {
@@ -5456,14 +5456,14 @@
                 "phpunit/php-timer": "^5.0.2",
                 "sebastian/cli-parser": "^1.0.1",
                 "sebastian/code-unit": "^1.0.6",
-                "sebastian/comparator": "^4.0.5",
+                "sebastian/comparator": "^4.0.8",
                 "sebastian/diff": "^4.0.3",
                 "sebastian/environment": "^5.1.3",
-                "sebastian/exporter": "^4.0.3",
+                "sebastian/exporter": "^4.0.5",
                 "sebastian/global-state": "^5.0.1",
                 "sebastian/object-enumerator": "^4.0.3",
                 "sebastian/resource-operations": "^3.0.3",
-                "sebastian/type": "^3.1",
+                "sebastian/type": "^3.2",
                 "sebastian/version": "^3.0.2"
             },
             "suggest": {
@@ -5507,7 +5507,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.24"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.25"
             },
             "funding": [
                 {
@@ -5517,9 +5517,13 @@
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2022-08-30T07:42:16+00:00"
+            "time": "2022-09-25T03:44:45+00:00"
         },
         {
             "name": "psalm/plugin-phpunit",
@@ -9423,7 +9427,7 @@
         },
         {
             "name": "wyrihaximus/async-test-utilities",
-            "version": "5.0.15",
+            "version": "5.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-async-test-utilities.git",
@@ -9465,7 +9469,7 @@
             "description": "Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-async-test-utilities/issues",
-                "source": "https://github.com/WyriHaximus/php-async-test-utilities/tree/5.0.15"
+                "source": "https://github.com/WyriHaximus/php-async-test-utilities/tree/5.0.16"
             },
             "funding": [
                 {
@@ -9516,16 +9520,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "b01d266e94b97a2985df35ec96e006d31c518520"
+                "reference": "4aa007813c3232f79d233f39c14a92947292372d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/b01d266e94b97a2985df35ec96e006d31c518520",
-                "reference": "b01d266e94b97a2985df35ec96e006d31c518520",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/4aa007813c3232f79d233f39c14a92947292372d",
+                "reference": "4aa007813c3232f79d233f39c14a92947292372d",
                 "shasum": ""
             },
             "require": {
@@ -9536,7 +9540,7 @@
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-php-parser": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.1",
-                "phpstan/phpstan-strict-rules": "^1.3",
+                "phpstan/phpstan-strict-rules": "^1.4",
                 "thecodingmachine/phpstan-safe-rule": "^1.2",
                 "thecodingmachine/phpstan-strict-rules": "^1.0"
             },
@@ -9554,7 +9558,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.5.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.6.0"
             },
             "funding": [
                 {
@@ -9562,20 +9566,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-25T21:24:09+00:00"
+            "time": "2022-09-24T06:10:25+00:00"
         },
         {
             "name": "wyrihaximus/test-utilities",
-            "version": "5.1.2",
+            "version": "5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-test-utilities.git",
-                "reference": "51fcfa3688b8836740d76fd351d02e47cacb5119"
+                "reference": "ffe3cfe3de70f9c08a36757cca66688049d9519e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/51fcfa3688b8836740d76fd351d02e47cacb5119",
-                "reference": "51fcfa3688b8836740d76fd351d02e47cacb5119",
+                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/ffe3cfe3de70f9c08a36757cca66688049d9519e",
+                "reference": "ffe3cfe3de70f9c08a36757cca66688049d9519e",
                 "shasum": ""
             },
             "require": {
@@ -9583,23 +9587,23 @@
                 "icanhazstring/composer-unused": "^0.8.2",
                 "infection/infection": "^0.26.5",
                 "jakobbuis/simple-slow-test-reporter": "^1.0",
-                "maglnet/composer-require-checker": "^4.0.0 || ^3.8.0",
-                "nunomaduro/collision": "^6.0.0 || ^5.11.0",
+                "maglnet/composer-require-checker": "^4.2.0",
+                "nunomaduro/collision": "^6.3.0",
                 "orklah/psalm-insane-comparison": "^2.0.0",
                 "php": "^8",
-                "php-coveralls/php-coveralls": "^2.5.2",
+                "php-coveralls/php-coveralls": "^2.5.3",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
                 "php-parallel-lint/php-parallel-lint": "^1.3.2",
                 "php-standard-library/psalm-plugin": "^1.1",
                 "phpspec/prophecy": "^1.15",
                 "phpspec/prophecy-phpunit": "^2.0.1",
-                "phpstan/phpstan": "^1.8.2",
-                "phpunit/phpunit": "^9.5.23",
+                "phpstan/phpstan": "^1.8.5",
+                "phpunit/phpunit": "^9.5.24",
                 "psalm/plugin-phpunit": "^0.17.0",
-                "roave/backward-compatibility-check": "^7 || ^6",
-                "roave/infection-static-analysis-plugin": "^1.18.0",
+                "roave/backward-compatibility-check": "^7.1.0",
+                "roave/infection-static-analysis-plugin": "^1.23.0",
                 "squizlabs/php_codesniffer": "^3.7.1",
-                "thecodingmachine/safe": "^2.2.3",
+                "thecodingmachine/safe": "^2.3.1",
                 "vimeo/psalm": "^4.26",
                 "wyrihaximus/coding-standard": "^2.11.0",
                 "wyrihaximus/phpstan-rules-wrapper": "^2"
@@ -9646,7 +9650,7 @@
             "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-test-utilities/issues",
-                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.1.2"
+                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.1.3"
             },
             "funding": [
                 {
@@ -9654,7 +9658,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-23T03:45:09+00:00"
+            "time": "2022-09-24T19:54:19+00:00"
         }
     ],
     "aliases": [],
