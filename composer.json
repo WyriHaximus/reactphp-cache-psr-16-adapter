@@ -11,7 +11,7 @@
   "require": {
     "php": "^8.1",
     "bentools/iterable-functions": "^2.1",
-    "psr/simple-cache": "^2.0",
+    "psr/simple-cache": "^3.0",
     "react/async": "^4.0",
     "react/cache": "^1.2",
     "thecodingmachine/safe": "^2.4.0"
