@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee844107285277498e554b1daeddc56f",
+    "content-hash": "045d2f531fc2c756b98d4d45047603e8",
     "packages": [
         {
             "name": "bentools/iterable-functions",
-            "version": "2.0.1",
+            "version": "2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bpolaszek/php-iterable-functions.git",
-                "reference": "95571ed5c94da7655f8d15bf888b12beabfd4543"
+                "reference": "7136af22d8f7165f173cbd04cfa224443ffacdb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bpolaszek/php-iterable-functions/zipball/95571ed5c94da7655f8d15bf888b12beabfd4543",
-                "reference": "95571ed5c94da7655f8d15bf888b12beabfd4543",
+                "url": "https://api.github.com/repos/bpolaszek/php-iterable-functions/zipball/7136af22d8f7165f173cbd04cfa224443ffacdb0",
+                "reference": "7136af22d8f7165f173cbd04cfa224443ffacdb0",
                 "shasum": ""
             },
             "require": {
@@ -49,9 +49,9 @@
             "description": "Provides functions for iterable variables: is_iterable(), iterable_to_array()",
             "support": {
                 "issues": "https://github.com/bpolaszek/php-iterable-functions/issues",
-                "source": "https://github.com/bpolaszek/php-iterable-functions/tree/2.0.1"
+                "source": "https://github.com/bpolaszek/php-iterable-functions/tree/2.1"
             },
-            "time": "2022-04-26T13:29:04+00:00"
+            "time": "2022-10-15T07:11:03+00:00"
         },
         {
             "name": "psr/simple-cache",
