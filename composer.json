@@ -17,7 +17,7 @@
     "thecodingmachine/safe": "^2.4.0"
   },
   "require-dev": {
-    "wyrihaximus/async-test-utilities": "^5.0.22"
+    "wyrihaximus/async-test-utilities": "^5.0.25"
   },
   "autoload": {
     "psr-4": {
