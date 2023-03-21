@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bentools/iterable-functions",
-            "version": "2.1",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bpolaszek/php-iterable-functions.git",
-                "reference": "7136af22d8f7165f173cbd04cfa224443ffacdb0"
+                "reference": "6a094a258e44edbbf7431ab0a57e27719dd576e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bpolaszek/php-iterable-functions/zipball/7136af22d8f7165f173cbd04cfa224443ffacdb0",
-                "reference": "7136af22d8f7165f173cbd04cfa224443ffacdb0",
+                "url": "https://api.github.com/repos/bpolaszek/php-iterable-functions/zipball/6a094a258e44edbbf7431ab0a57e27719dd576e5",
+                "reference": "6a094a258e44edbbf7431ab0a57e27719dd576e5",
                 "shasum": ""
             },
             "require": {
@@ -49,9 +49,9 @@
             "description": "Provides functions for iterable variables: is_iterable(), iterable_to_array()",
             "support": {
                 "issues": "https://github.com/bpolaszek/php-iterable-functions/issues",
-                "source": "https://github.com/bpolaszek/php-iterable-functions/tree/2.1"
+                "source": "https://github.com/bpolaszek/php-iterable-functions/tree/2.1.1"
             },
-            "time": "2022-10-15T07:11:03+00:00"
+            "time": "2023-03-21T02:34:04+00:00"
         },
         {
             "name": "psr/simple-cache",
