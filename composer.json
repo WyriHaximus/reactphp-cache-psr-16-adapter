@@ -14,7 +14,7 @@
     "psr/simple-cache": "^2.0",
     "react/async": "^4.0",
     "react/cache": "^1.2",
-    "thecodingmachine/safe": "^2.4.0"
+    "thecodingmachine/safe": "^2.5.0"
   },
   "require-dev": {
     "wyrihaximus/async-test-utilities": "^5.0.25"
