@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6980dd674c9d3eeb751338a8c35b0f9",
+    "content-hash": "13c60f6081553a318981677153ce7d76",
     "packages": [
         {
             "name": "bentools/iterable-functions",
