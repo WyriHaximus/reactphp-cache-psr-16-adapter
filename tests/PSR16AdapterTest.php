@@ -6,6 +6,7 @@ namespace WyriHaximus\Tests\React\Cache;
 
 use DateInterval;
 use Exception;
+use Mockery;
 use React\Cache\CacheInterface;
 use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
 use WyriHaximus\React\Cache\PSR16Adapter;
@@ -17,49 +18,49 @@ final class PSR16AdapterTest extends AsyncTestCase
 {
     public function testGet(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
-        $client->get($key, null)->shouldBeCalled()->willReturn(resolve($value));
-        self::assertSame($value, (new PSR16Adapter($client->reveal()))->get($key));
+        $client->shouldReceive('get')->with($key, null)->andReturn(resolve($value));
+        self::assertSame($value, (new PSR16Adapter($client))->get($key));
     }
 
     public function testGetNonExistant(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->get($key, null)->shouldBeCalled()->willReturn(resolve(null));
-        self::assertNull((new PSR16Adapter($client->reveal()))->get($key));
+        $client->shouldReceive('get')->with($key, null)->andReturn(resolve(null));
+        self::assertNull((new PSR16Adapter($client))->get($key));
     }
 
     public function testSet(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
-        $client->set($key, $value, null)->shouldBeCalled()->willReturn(resolve(true));
-        (new PSR16Adapter($client->reveal()))->set($key, $value);
+        $client->shouldReceive('set')->with($key, $value, null)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->set($key, $value));
     }
 
     public function testSetTtl(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
         $ttl    = 123;
-        $client->set($key, $value, $ttl)->shouldBeCalled()->willReturn(resolve(true));
-        self::assertTrue((new PSR16Adapter($client->reveal()))->set($key, $value, $ttl));
+        $client->shouldReceive('set')->with($key, $value, $ttl)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->set($key, $value, $ttl));
     }
 
     public function testSetDateIntervalTtl(): void
     {
-        $client          = $this->prophesize(CacheInterface::class);
+        $client          = Mockery::mock(CacheInterface::class);
         $key             = 'key';
         $value           = 'value';
         $dateIntervalTtl = new DateInterval('PT123S');
         $ttl             = 123;
-        $client->set($key, $value, $ttl)->shouldBeCalled()->willReturn(resolve(true));
-        self::assertTrue((new PSR16Adapter($client->reveal()))->set($key, $value, $dateIntervalTtl));
+        $client->shouldReceive('set')->with($key, $value, $ttl)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->set($key, $value, $dateIntervalTtl));
     }
 
     public function testSetTtlException(): void
@@ -68,12 +69,12 @@ final class PSR16AdapterTest extends AsyncTestCase
         self::expectException($exception::class);
         self::expectExceptionMessage($exception->getMessage());
 
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
         $ttl    = 123;
-        $client->set($key, $value, $ttl)->shouldBeCalled()->willReturn(reject($exception));
-        self::assertFalse((new PSR16Adapter($client->reveal()))->set($key, $value, $ttl));
+        $client->shouldReceive('set')->with($key, $value, $ttl)->andReturn(reject($exception));
+        self::assertFalse((new PSR16Adapter($client))->set($key, $value, $ttl));
     }
 
     public function testSetException(): void
@@ -82,19 +83,19 @@ final class PSR16AdapterTest extends AsyncTestCase
         self::expectException($exception::class);
         self::expectExceptionMessage($exception->getMessage());
 
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
-        $client->set($key, $value, null)->shouldBeCalled()->willReturn(reject($exception));
-        self::assertFalse((new PSR16Adapter($client->reveal()))->set($key, $value));
+        $client->shouldReceive('set')->with($key, $value, null)->andReturn(reject($exception));
+        self::assertFalse((new PSR16Adapter($client))->set($key, $value));
     }
 
     public function testDelete(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->delete($key)->shouldBeCalled()->willReturn(resolve(true));
-        (new PSR16Adapter($client->reveal()))->delete($key);
+        $client->shouldReceive('delete')->with($key)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->delete($key));
     }
 
     public function testDeleteException(): void
@@ -103,26 +104,26 @@ final class PSR16AdapterTest extends AsyncTestCase
         self::expectException($exception::class);
         self::expectExceptionMessage($exception->getMessage());
 
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->delete($key)->shouldBeCalled()->willReturn(reject($exception));
-        (new PSR16Adapter($client->reveal()))->delete($key);
+        $client->shouldReceive('delete')->with($key)->andReturn(reject($exception));
+        (new PSR16Adapter($client))->delete($key);
     }
 
     public function testHas(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->has($key)->shouldBeCalled()->willReturn(resolve(true));
-        (new PSR16Adapter($client->reveal()))->has($key);
+        $client->shouldReceive('has')->with($key)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->has($key));
     }
 
     public function testDeleteMultiple(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->deleteMultiple([$key])->shouldBeCalled()->willReturn(resolve(true));
-        (new PSR16Adapter($client->reveal()))->deleteMultiple([$key]);
+        $client->shouldReceive('deleteMultiple')->with([$key])->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->deleteMultiple([$key]));
     }
 
     public function testDeleteMultipleException(): void
@@ -131,35 +132,35 @@ final class PSR16AdapterTest extends AsyncTestCase
         self::expectException($exception::class);
         self::expectExceptionMessage($exception->getMessage());
 
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
-        $client->deleteMultiple([$key])->shouldBeCalled()->willReturn(reject($exception));
-        (new PSR16Adapter($client->reveal()))->deleteMultiple([$key]);
+        $client->shouldReceive('deleteMultiple')->with([$key])->andReturn(reject($exception));
+        (new PSR16Adapter($client))->deleteMultiple([$key]);
     }
 
     public function testCLear(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
-        $client->clear()->shouldBeCalled()->willReturn(resolve(true));
-        (new PSR16Adapter($client->reveal()))->clear();
+        $client = Mockery::mock(CacheInterface::class);
+        $client->shouldReceive('clear')->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->clear());
     }
 
     public function testSetMultiple(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
         $ttl    = 123;
-        $client->setMultiple([$key => $value], $ttl)->shouldBeCalled()->willReturn(resolve(true));
-        self::assertTrue((new PSR16Adapter($client->reveal()))->setMultiple([$key => $value], $ttl));
+        $client->shouldReceive('setMultiple')->with([$key => $value], $ttl)->andReturn(resolve(true));
+        self::assertTrue((new PSR16Adapter($client))->setMultiple([$key => $value], $ttl));
     }
 
     public function testGetMultiple(): void
     {
-        $client = $this->prophesize(CacheInterface::class);
+        $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
         $value  = 'value';
-        $client->getMultiple([$key], null)->shouldBeCalled()->willReturn(resolve([$key => $value]));
-        self::assertSame([$key => $value], (new PSR16Adapter($client->reveal()))->getMultiple([$key]));
+        $client->shouldReceive('getMultiple')->with([$key], null)->andReturn(resolve([$key => $value]));
+        self::assertSame([$key => $value], (new PSR16Adapter($client))->getMultiple([$key]));
     }
 }

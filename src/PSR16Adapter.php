@@ -15,7 +15,7 @@ use function React\Async\await;
 final class PSR16Adapter implements SimpleCacheInterface
 {
     public function __construct(
-        private readonly CacheInterface $cache
+        private readonly CacheInterface $cache,
     ) {
     }
 
@@ -25,9 +25,6 @@ final class PSR16Adapter implements SimpleCacheInterface
      */
     public function get(string $key, mixed $default = null)
     {
-        /**
-         * @psalm-suppress TooManyTemplateParams
-         */
         return await($this->cache->get($key, $default));
     }
 
@@ -37,48 +34,32 @@ final class PSR16Adapter implements SimpleCacheInterface
      */
     public function set(string $key, mixed $value, DateInterval|int|null $ttl = null)
     {
-        /**
-         * @var bool
-         * @psalm-suppress TooManyTemplateParams
-         */
         return await($this->cache->set($key, $value, $this->convertToSeconds($ttl)));
     }
 
-    /**
-     * @inheritDoc
-     */
+    /** @inheritDoc */
     public function delete(string $key)
     {
-        /**
-         * @var bool
-         * @psalm-suppress TooManyTemplateParams
-         */
         return await($this->cache->delete($key));
     }
 
-    /**
-     * @inheritDoc
-     */
+    /** @inheritDoc */
     public function clear()
     {
-        /**
-         * @var bool
-         * @psalm-suppress TooManyTemplateParams
-         */
         return await($this->cache->clear());
     }
 
     /**
      * @inheritDoc
+     * @psalm-suppress InvalidReturnType
      * @phpstan-ignore-next-line
      */
     public function getMultiple(iterable $keys, mixed $default = null): iterable
     {
         /**
-         * @var iterable<string, mixed>
-         * @phpstan-ignore-next-line
-         * @psalm-suppress TooManyTemplateParams
+         * @psalm-suppress InvalidReturnStatement
          * @psalm-suppress MixedArgumentTypeCoercion
+         * @phpstan-ignore-next-line
          */
         return await($this->cache->getMultiple(iterable_to_array($keys), $default));
     }
@@ -90,39 +71,29 @@ final class PSR16Adapter implements SimpleCacheInterface
     public function setMultiple(iterable $values, DateInterval|int|null $ttl = null)
     {
         /**
-         * @var bool
-         * @psalm-suppress TooManyTemplateParams
          * @psalm-suppress MixedArgumentTypeCoercion
+         * @phpstan-ignore-next-line
          */
         return await($this->cache->setMultiple(iterable_to_array($values), $this->convertToSeconds($ttl)));
     }
 
-    /**
-     * @inheritDoc
-     */
+    /** @inheritDoc */
     public function deleteMultiple(iterable $keys)
     {
         /**
-         * @var bool
-         * @phpstan-ignore-next-line
-         * @psalm-suppress TooManyTemplateParams
          * @psalm-suppress MixedArgumentTypeCoercion
+         * @phpstan-ignore-next-line
          */
         return await($this->cache->deleteMultiple(iterable_to_array($keys)));
     }
 
-    /**
-     * @inheritDoc
-     */
+    /** @inheritDoc */
     public function has(string $key)
     {
-        /**
-         * @var bool
-         * @psalm-suppress TooManyTemplateParams
-         */
         return await($this->cache->has($key));
     }
 
+    /** @phpstan-ignore-next-line */
     private function convertToSeconds(DateInterval|int|null $ttl): int|null
     {
         if ($ttl instanceof DateInterval) {
