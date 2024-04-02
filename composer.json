@@ -42,21 +42,14 @@
     },
     "sort-packages": true
   },
-  "extra": {
-    "unused": [
-      "bentools/iterable-functions",
-      "psr/simple-cache",
-      "react/async",
-      "react/cache",
-      "thecodingmachine/safe"
-    ]
-  },
   "scripts": {
     "post-install-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ],
     "post-update-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ]
   }
 }
