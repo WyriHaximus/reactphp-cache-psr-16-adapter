@@ -22,8 +22,7 @@ final readonly class PSR16Adapter implements SimpleCacheInterface
 
     /**
      * @inheritDoc
-     * @phpstan-ignore-next-line
-     * @phpstan-ignore shipmonk.missingNativeReturnTypehint,typeCoverage.returnTypeCoverage,ergebnis.noParameterWithNullableTypeDeclaration,ergebnis.noParameterWithNullDefaultValue
+     * @phpstan-ignore shipmonk.missingNativeReturnTypehint,typeCoverage.returnTypeCoverage,ergebnis.noParameterWithNullDefaultValue
      */
     public function get(string $key, mixed $default = null)
     {
@@ -32,7 +31,6 @@ final readonly class PSR16Adapter implements SimpleCacheInterface
 
     /**
      * @inheritDoc
-     * @phpstan-ignore-next-line
      * @phpstan-ignore shipmonk.missingNativeReturnTypehint,typeCoverage.returnTypeCoverage,ergebnis.noParameterWithNullableTypeDeclaration,ergebnis.noParameterWithNullDefaultValue
      */
     public function set(string $key, mixed $value, DateInterval|int|null $ttl = null)
@@ -60,32 +58,21 @@ final readonly class PSR16Adapter implements SimpleCacheInterface
 
     /**
      * @inheritDoc
-     * @psalm-suppress InvalidReturnType
-     * @phpstan-ignore shipmonk.missingNativeReturnTypehint,typeCoverage.returnTypeCoverage,ergebnis.noParameterWithNullableTypeDeclaration,missingType.iterableValue,ergebnis.noParameterWithNullDefaultValue
+     * @phpstan-ignore ergebnis.noParameterWithNullDefaultValue
      */
     public function getMultiple(iterable $keys, mixed $default = null): iterable
     {
-        /**
-         * @psalm-suppress InvalidReturnStatement
-         * @psalm-suppress MixedArgumentTypeCoercion
-         * @phpstan-ignore-next-line
-         * @phpstan-ignore argument.templateType,argument.type,return.type
-         */
+        /** @phpstan-ignore argument.templateType,argument.type,return.type */
         return await($this->cache->getMultiple(iterable_to_array($keys), $default));
     }
 
     /**
      * @inheritDoc
-     * @phpstan-ignore-next-line
      * @phpstan-ignore shipmonk.missingNativeReturnTypehint,typeCoverage.returnTypeCoverage,ergebnis.noParameterWithNullableTypeDeclaration,missingType.iterableValue,ergebnis.noParameterWithNullDefaultValue
      */
     public function setMultiple(iterable $values, DateInterval|int|null $ttl = null)
     {
-        /**
-         * @psalm-suppress MixedArgumentTypeCoercion
-         * @phpstan-ignore-next-line
-         * @phpstan-ignore argument.templateType,argument.type,return.type
-         */
+        /** @phpstan-ignore argument.templateType,argument.type */
         return await($this->cache->setMultiple(iterable_to_array($values), $this->convertToSeconds($ttl)));
     }
 
@@ -95,11 +82,7 @@ final readonly class PSR16Adapter implements SimpleCacheInterface
      */
     public function deleteMultiple(iterable $keys)
     {
-        /**
-         * @psalm-suppress MixedArgumentTypeCoercion
-         * @phpstan-ignore-next-line
-         * @phpstan-ignore argument.templateType,argument.type,return.type
-         */
+        /** @phpstan-ignore argument.templateType,argument.type */
         return await($this->cache->deleteMultiple(iterable_to_array($keys)));
     }
 
@@ -112,10 +95,7 @@ final readonly class PSR16Adapter implements SimpleCacheInterface
         return await($this->cache->has($key));
     }
 
-    /**
-     * @phpstan-ignore-next-line
-     * @phpstan-ignore ergebnis.noParameterWithNullableTypeDeclaration
-     */
+    /** @phpstan-ignore ergebnis.noParameterWithNullableTypeDeclaration */
     private function convertToSeconds(DateInterval|int|null $ttl): int|null
     {
         if ($ttl instanceof DateInterval) {
