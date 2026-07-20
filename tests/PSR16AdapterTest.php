@@ -74,7 +74,7 @@ final class PSR16AdapterTest extends AsyncTestCase
     {
         $exception = new Exception('fail!');
         self::expectException($exception::class);
-        self::expectExceptionMessage($exception->getMessage());
+        self::expectExceptionMessageIsOrContains($exception->getMessage());
 
         $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
@@ -89,7 +89,7 @@ final class PSR16AdapterTest extends AsyncTestCase
     {
         $exception = new Exception('fail!');
         self::expectException($exception::class);
-        self::expectExceptionMessage($exception->getMessage());
+        self::expectExceptionMessageIsOrContains($exception->getMessage());
 
         $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
@@ -112,7 +112,7 @@ final class PSR16AdapterTest extends AsyncTestCase
     {
         $exception = new Exception('fail!');
         self::expectException($exception::class);
-        self::expectExceptionMessage($exception->getMessage());
+        self::expectExceptionMessageIsOrContains($exception->getMessage());
 
         $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
@@ -143,7 +143,7 @@ final class PSR16AdapterTest extends AsyncTestCase
     {
         $exception = new Exception('fail!');
         self::expectException($exception::class);
-        self::expectExceptionMessage($exception->getMessage());
+        self::expectExceptionMessageIsOrContains($exception->getMessage());
 
         $client = Mockery::mock(CacheInterface::class);
         $key    = 'key';
