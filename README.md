@@ -1,6 +1,6 @@
 # [ReactPHP](https://reactphp.org/) [PSR-16](https://www.php-fig.org/psr/psr-16/) cache adapter
 
-[![Continuous Integration](https://github.com/WyriHaximus/reactphp-cache-psr-16-adapter/actions/workflows/ci.yml/badge.svg)](https://github.com/WyriHaximus/reactphp-cache-psr-16-adapter/actions/workflows/ci.yml)
+[![Continuous Integration](https://github.com/WyriHaximus/reactphp-cache-psr-16-adapter/actions/workflows/ci.yaml/badge.svg)](https://github.com/WyriHaximus/reactphp-cache-psr-16-adapter/actions/workflows/ci.yaml)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/react-cache-psr-16-adapter/v/stable.png)](https://packagist.org/packages/WyriHaximus/react-cache-psr-16-adapter)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/react-cache-psr-16-adapter/downloads.png)](https://packagist.org/packages/WyriHaximus/react-cache-psr-16-adapter/stats)
 [![License](https://poser.pugx.org/WyriHaximus/react-cache-psr-16-adapter/license.png)](https://packagist.org/packages/wyrihaximus/react-cache-psr-16-adapter)
